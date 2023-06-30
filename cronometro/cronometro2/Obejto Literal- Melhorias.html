@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/Erick/Desktop/javascript2/POO/ObjetoLiteral_Melhorias.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Obejto Literal- Melhorias</title>
+</head>
+<body>
+	<input type="text" id="nome" placeholder="nome">
+	<input type="text" id="idade" placeholder="idade">
+	<input type="text" id="sexo" placeholder="sexo">
+	<input type="text" id="profissao" placeholder="profissao">
+
+	<button id="enviar">Enviar</button>
+	<script>
+
+
+		const enviar=document.getElementById('enviar')
+
+		enviar.addEventListener('click',function(e){
+			let nome=document.getElementById('nome').value
+			let idade=document.getElementById('idade').value
+			let sexo=document.getElementById('sexo').value
+			let profissao=document.getElementById('profissao').value
+		 	
+			let objeto={
+			nome:nome,
+			idade:idade,
+			sexo:sexo,
+			profissao:profissao,
+			verDados:function(){
+				console.log(`${nome} ${idade} anos ${sexo} ${profissao}`)
+			}
+		}
+
+		objeto.verDados()
+		console.log(objeto)
+		})
+
+
+	
+
+		let objeto2={
+			nome, 		//quando se possui o mesmo nome o nome do par e da variavel 
+							//não conflitam e o javascript tem inteligencia para ler as informações e não confudir-las
+			idade,
+			sexo,
+			profissao,
+			verDados:function(){
+				console.log(`${nome} ${idade} anos ${sexo} ${profissao}`)
+			}
+		}
+		//objeto2.verDados()
+		//console.log(objeto2)
+	</script>
+
+</body></html>

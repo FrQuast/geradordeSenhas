@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pilar da herança</title>
+</head>
+<body>
+
+
+	<script>
+
+				
+				class Animal{
+					constructor(cor,tamanho,peso){
+						this.cor=cor
+						this.tamanho=tamanho
+						this.peso=peso
+					}
+
+					dormir(){
+						console.log('dormir')
+					}
+				}
+
+			class Passaro extends Animal{
+				constructor(bico,cor,tamanho,peso){
+					super(cor,tamanho,peso)
+					this.bico=bico
+				}
+
+				voar(){
+					console.log('voar')
+				}
+				dormir(){
+					console.log('dormir')
+				}
+			}
+
+			class Papagaio extends Passaro{
+				constructor(bico,sabeFalar,cor,tamanho,peso){
+					
+					super(bico,cor,tamanho,peso)
+					this.sabeFalar= sabeFalar
+				}
+			}
+
+			class Gato extends Animal{
+				constructor(Mia,cor,tamanho,peso){
+					super(cor,tamanho,peso)
+					this.mia=Mia
+				}
+			}
+
+			class Avestruz extends Passaro{
+				constructor(){
+					super('medio','preto e branco',30,150)
+				}
+
+				enterrarCabeça(){
+					console.log('enterrar cabeça')
+				}
+				voar(){
+					console.log('avestruz não voa')
+				}
+			}
+			let gato=new Gato(true,'preto',100,300)
+			//console.log(gato)
+			let papagaio = new Papagaio('medio',true,'verde', 30,350)
+			let papagaio2 = new Papagaio('pequeno',false,'amarelo',10,50)
+
+			let avestruz=new Avestruz()
+			avestruz.enterrarCabeça()
+			avestruz.voar()
+			console.log(avestruz)
+			//console.log(papagaio)
+			//console.log(papagaio2)
+
+
+
+	</script>
+</body>
+</html>
