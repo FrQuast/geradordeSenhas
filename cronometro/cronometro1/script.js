@@ -21,7 +21,9 @@ resetBtn.addEventListener('click',resetTime)
 
 
 function startTimer(){
+    
     interval= setInterval(()=>{
+        console.log('iniciou')
         if(!isPaused){
             milliseconds+=10
 
@@ -60,6 +62,7 @@ function resumeTimer(){
 }
 
 function resetTime(){
+    isPaused=false
     clearInterval(interval);
     minutes=0;
     seconds=0;
